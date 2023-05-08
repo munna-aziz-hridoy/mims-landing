@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-white: #fff;
+  --color-black: #141414;
+  --color-orange: #fe3d01;
+  --color-yellow: #f0ff6f;
+  --color-light-blue: #9dbde2;
+  --color-white-off: #c8c8c8;
+
+  /* font */
+
+  --heading-font: "Limelight", cursive;
+  --body-font: "Poppins", sans-serif;
+
+  --font-sm: 12px;
+  --font-md: 14px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 22px;
+  --font-3xl: 26px;
+  --font-big: 52px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ff6f61;
+}
+::-webkit-scrollbar-thumb {
+  background: #fe3c0190;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fe3d01;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--body-font);
+}
+
+.relative {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 640px) {
+  .container {
+    width: 590px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 990px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    width: 1280px;
+  }
+}

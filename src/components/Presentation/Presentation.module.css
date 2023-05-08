@@ -1,0 +1,21 @@
+.presentation {
+  margin: 150px 0;
+}
+
+.title {
+  font-family: var(--heading-font);
+  text-align: center;
+  font-size: var(--font-big);
+}
+
+.presentation_lottie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}

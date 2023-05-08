@@ -1,0 +1,223 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.left {
+  padding: 30px 50px;
+  background: var(--color-white);
+  width: calc(100% - 70px);
+  align-self: stretch;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.left div h2 {
+  font-family: var(--heading-font);
+  color: var(--color-black);
+  font-size: var(--font-big);
+  text-align: center;
+}
+
+.left div p {
+  font-family: var(--body-font);
+  color: var(--color-black);
+  font-size: var(--font-lg);
+  text-align: center;
+}
+
+.left_img {
+  width: 40%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_img img {
+  width: 100%;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 5px 5px 10px 2px #0000004a;
+  z-index: 10;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.play_button {
+  position: absolute;
+  z-index: 20;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--color-orange);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fe3c011d;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.left_img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--color-orange);
+  right: -10px;
+  top: 10px;
+  z-index: 9;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.video_modal {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: var(--color-white);
+  padding: 20px;
+  z-index: 100;
+  top: 0;
+  opacity: 0;
+  box-shadow: 5px 5px 10px 2px #0000004a;
+  transition: all 0.5s linear;
+  transform: translate(24%, 20%);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+.video_modal.active {
+  width: 800px;
+  height: 465px;
+  opacity: 1;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.cross_button {
+  color: var(--color-black);
+  background: var(--color-orange);
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.cross_button.active {
+  width: 30px;
+  height: 30px;
+  z-index: 101;
+}
+
+.right {
+  width: 70px;
+  background-color: var(--color-orange);
+  padding: 20px;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  writing-mode: vertical-lr;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+.right p {
+  font-size: var(--font-xl);
+  font-weight: 600;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+@media (min-width: 640px) {
+}
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .left_img {
+    width: 100%;
+  }
+
+  .left div h2 {
+    font-size: 22px;
+  }
+
+  .right {
+    margin-top: -70px;
+
+    align-self: center;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+}
+@media (max-width: 1024px) {
+}
