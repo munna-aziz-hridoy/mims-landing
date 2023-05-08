@@ -130,8 +130,22 @@
 @media (min-width: 640px) {
 }
 @media (max-width: 768px) {
+  .left_content {
+    flex-direction: column;
+  }
+
+  .left_content div,
+  .left_content p {
+    width: 100%;
+  }
+
+  .left_content div {
+    gap: 20px;
+  }
+
   .right_content {
     gap: 8px;
+    padding: 8px;
   }
 
   .right_content p {
