@@ -116,7 +116,7 @@
 }
 
 .video_modal.active {
-  width: 800px;
+  width: 750px;
   height: 465px;
   opacity: 1;
 }
@@ -219,6 +219,14 @@
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
   }
+
+  .video_modal,
+  .play_button {
+    display: none;
+  }
 }
 @media (max-width: 1024px) {
+  .video_modal {
+    left: -182px;
+  }
 }
